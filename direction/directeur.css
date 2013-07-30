@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    font: italic;
+}
+hr {
+    margin-left: 300px;
+    margin-right: 300px;
+h2 {
+    margin-left: 50px;
+    text-decoration: bold;
+}    
+p {
+    text-align: center;
+    margin-left: 200px;
+}
+
