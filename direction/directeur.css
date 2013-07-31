@@ -1,19 +1,27 @@
 body {
-    text-align: center;
+    background-color: #C06A3A;
 }
 h1 {
     text-align: center;
-    font: italic;
+    text-decoration: italic;
 }
 hr {
     margin-left: 300px;
     margin-right: 300px;
+}
 h2 {
-    margin-left: 50px;
+    margin-left: 200px;
     text-decoration: bold;
 }    
-p {
-    text-align: center;
+section {
+    border: solid;
+    border-width: 2px;
+    padding: 0px;
+    margin-left: 160px;
+}
+#longer {
     margin-left: 200px;
 }
-
+#short {
+    margin-left: 200px;
+}
