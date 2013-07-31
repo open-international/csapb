@@ -5,7 +5,7 @@
 <title>Complexe Scolaire Adja Penda Ba</title>
 <style type="text/css">
 body {
-    background-color: #006666;
+    background-color: #00CC99;
 }
 header {
     height: 170px;
@@ -16,11 +16,14 @@ header img {
 }
 header h1 {
     text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 70px;
     color: #C06A3A;
 }
 ul#menu {
     display: block;
     text-align: center;
+    font-size: 30px;
 }
 ul#menu li {
     display: inline;
@@ -42,15 +45,37 @@ h2 {
     text-decoration: underline;
     color: #C06A3A;
 }
+.rs-slideshow {
+    height: 640px;
+    margin: 24px auto;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+}
+.rs-slideshow .slide-container {
+    background-color: #444;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.rs-slideshow .slide-container img {
+    position: absolute;
+}
 </style>
+
 <script src="../jquery-current.min.js"></script>
 <script src="jquery.rs.slideshow.min.js"></script>
+
 <script>
 $(document).ready(function() {	
     $("#slideshow-div").rsfSlideshow();
 });
 </script>
 </head>
+
 <body>
 <header>
 <img src="images/adjapendaba_logo.svg" alt="Adja Penda Ba Logo">
@@ -60,8 +85,9 @@ $(document).ready(function() {
 <ul id="menu">
   <li>Accueil
     <a href="accueil/motdirection.html">Direction</a>
-    <a href="accueil/cycle.html">Cycle Scolaire</a>
+    <a href="accueil/cycle/cycle.html">Cycle Scolaire</a>
     <a href="accueil/corps.html">Corps enseignant</a>
+    <a href="accueil/direction/direction.html">Direction</a>
   </li>
   <li>Admission
     <a href="admission/conditions.html">Conditions</a>
@@ -99,6 +125,8 @@ $(document).ready(function() {
 
 </ul>
 </header>
+
+<hr>
 
 <div id="slideshow-div" class="rs-slideshow">
 <div class="slide-container">
