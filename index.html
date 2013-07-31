@@ -35,12 +35,22 @@ ul#menu li a {
 footer {
     text-align: center;
 }
+footer a:visited {
+    color: #E8E8E8;
+}
 h2 {
     text-decoration: underline;
     color: #C06A3A;
 }
 
 </style>
+<script src="../jquery-current.min.js"></script>
+<script src="jquery.rs.slideshow.min.js"></script>
+<script>
+$(document).ready(function() {	
+    $("#slideshow-div").rsfSlideshow();
+});
+</script>
 </head>
 <body>
 <header>
@@ -91,6 +101,19 @@ h2 {
 </ul>
 </header>
 
+<div id="slideshow-div" class="rs-slideshow">
+<div class="slide-container">
+<img src="../public_html/images/working_boy.JPG" alt="Boy" title="Boy">
+</div>
+
+<ol class="slides">
+  <li><a href="../images/friends.JPG">1</a></li>
+  <li><a href="../images/group.JPG">2</a></li>
+  <li><a href="../images/khady_ben.JPG">3</a></li>
+  <li><a href="../images/pensive.JPG">4</a></li>
+  <li><a href="../images/together.JPG">5</a></li>
+</ol>
+</div>
 <hr>
 
 <h2>Comment Vous Pouvez Aider:</h2>
