@@ -1,5 +1,5 @@
 body {
-    background-color: #C06A3A;
+    background-color: #D2B48C;
 }
 h1 {
     text-align: center;
@@ -17,10 +17,11 @@ section {
     border: solid;
     border-width: 2px;
     padding: 0px;
-    margin-left: 160px;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 #longer {
-    margin-left: 200px;
+    margin-left: 150px;
 }
 #short {
     margin-left: 200px;
