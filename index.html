@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <title>Complexe Scolaire Adja Penda Ba</title>
 <style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #D2B48C;
+}
 section {
-    background-color: #006699;
+    background-color: #008080;
 }
 header {
-    background-color: #006699;
+    margin: 0;
+    background-color: #008080;
 }
 header {
     height: 170px;
@@ -18,13 +24,15 @@ header img {
     float: left;
 }
 header h1 {
+    margin-top: 0;
+    padding-top: 20px;
     text-align: center;
-    font-family: "Comic Sans MS";
     font-size: 60px;
     color: #C06A3A;
 }
 ul#menu {
     display: block;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 30px;
 }
@@ -49,7 +57,7 @@ h2 {
     color: #C06A3A;
 }
 .rs-slideshow {
-    height: 640px;
+    height: 540px;
     margin: 24px auto;
     overflow: hidden;
     position: relative;
@@ -68,10 +76,8 @@ h2 {
     position: absolute;
 }
 </style>
-
 <script src="../jquery-current.min.js"></script>
 <script src="jquery.rs.slideshow.min.js"></script>
-
 <script>
 $(document).ready(function() {	
     $("#slideshow-div").rsfSlideshow();
@@ -80,11 +86,10 @@ $(document).ready(function() {
 </head>
 
 <body>
+
 <header>
 <img src="images/adjapendaba_logo.svg" alt="Adja Penda Ba Logo">
-
 <h1>Complexe Scolaire Adja Penda Ba</h1>
-
 <ul id="menu">
   <li>Accueil
     <a href="accueil/motdirection.html">Direction</a>
@@ -125,11 +130,8 @@ $(document).ready(function() {
   <li>Donner
     <a href="http://www.openinternational.org/donate/">Donner</a>
   </li>
-
 </ul>
 </header>
-
-<hr>
 
 <div id="slideshow-div" class="rs-slideshow">
 <div class="slide-container">
@@ -144,7 +146,6 @@ $(document).ready(function() {
   <li><a href="../images2/together.JPG">5</a></li>
 </ol>
 </div>
-<hr>
 
 <section>
 
