@@ -27,11 +27,54 @@ h1 {
 h2 {
     color: #FF6600;
 }
-img {
+ul.slideshow {
+    display: table;
+    list-style: none;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}	
+ul.slideshow li {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+ul.slideshow li.show {
+    z-index: 500;	
+}
+ul img {
+    border: none;	
+}
+#slideshow-caption {
+    width: 800px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;	
+    color: #fff;
+    background: #000;
+    z-index: 500;
+}
+#slideshow-caption .slideshow-caption-container {
+    padding: 5px 10px;		
+    z-index: 1000;
+}
+#slideshow-caption h3 {
+    margin: 0;
+    padding: 0;	
+    font-size: 14px;
+}
+#slideshow-caption p {
+    margin: 5px 0 0 0;
+    padding: 0;
 }
 </style>
-<script src="../js/jquery-current.min.js"></script>
-<script src="js/slideshow.js"></script>
+<script src="../jquery-current.min.js"></script>
+<script src="slideshow.js"></script>
 <script>
 $(document).ready(function() {		
     //Execute the slideShow, set speed for image transitions
@@ -55,10 +98,12 @@ Jusqu'à récemment, le Collège Adja Penda Ba a été financée presque entièr
 <ul class="slideshow">
   <li class="slideshow"><img id="founder" 
   src="http://www.openinternational.org/wp-content/uploads/2011/05
-  /about_tleft_large.png"></li>
-  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/scho  ol_bleft_large.png"></li>
-  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/scho  ol_tleft_large.png"></li>
-  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/abou  t_bright_large.png"></li>
+  /about_tleft_large.png" width="800" height="600" title="Khady Lusby" 
+  alt="Khady Lusby"></li>
+  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/scho  ol_bleft_large.png" width="800" height="600" title="Beginning Work" 
+  alt="Beginning Work"></li>
+  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/scho  ol_tleft_large.png" width="800" height="600" title="Adja Penda Ba's First Clas  s" alt="Adja Penda Ba's First Class"></li>
+  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/abou  t_bright_large.png" width="800" height="600" title="A Classroom at Adja Penda   Ba" alt="A Classroom at Adja Penda Ba"></li>
 </ul>
 
 </body>
