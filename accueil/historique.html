@@ -8,6 +8,12 @@ body {
     text-align: center;
     background-color: #D2B48C; 
 }
+p#khady {
+    border: groove;
+    padding: 5px 5px 5px 5px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
 section {
     text-align: left;
     margin-left: 233px; 
@@ -24,13 +30,20 @@ h2 {
 img {
 }
 </style>
+<script src="../js/jquery-current.min.js"></script>
+<script src="js/slideshow.js"></script>
+<script>
+$(document).ready(function() {		
+    //Execute the slideShow, set speed for image transitions
+    slideShow(4000);
+});
+</script>
 </head>
 <body>
 <h1>Historique</h1>
-<p>L'école Privée Adja Penda BA a été créée en Octobre 2009
+<p id="khady">L'école Privée Adja Penda BA a été créée en Octobre 2009
 par Madame LUSBY Khadidiatou WADE présidente d'Open International. L'école
 avait démmaré avec deux salles de classes.</p>
-<img src="http://www.openinternational.org/wp-content/uploads/2011/05/about_tleft_large.png">
 <hr>
 <section>
 <h2>À Propos de L'école</h2>
@@ -38,8 +51,15 @@ avait démmaré avec deux salles de classes.</p>
  
 Jusqu'à récemment, le Collège Adja Penda Ba a été financée presque entièrement par Khady elle-même, avec des dons périodiques de ses amis. En 2010, cela a changé quand elle a fondé l'organisation à but non lucratif "OPEN international" dédié à l'éducation des enfants à Nioro et les villages de la région. Khady Lusby est président de l'Open international qui est administré par un conseil d'administration local et conseillers au Sénégal.</p>
 </section>
-<img src="http://www.openinternational.org/wp-content/uploads/2011/05/school_bleft_large.png">
-<img src="http://www.openinternational.org/wp-content/uploads/2011/05/school_tleft_large.png">
-<img src="http://www.openinternational.org/wp-content/uploads/2011/05/about_bright_large.png">
+
+<ul class="slideshow">
+  <li class="slideshow"><img id="founder" 
+  src="http://www.openinternational.org/wp-content/uploads/2011/05
+  /about_tleft_large.png"></li>
+  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/scho  ol_bleft_large.png"></li>
+  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/scho  ol_tleft_large.png"></li>
+  <li><img src="http://www.openinternational.org/wp-content/uploads/2011/05/abou  t_bright_large.png"></li>
+</ul>
+
 </body>
 </html>
