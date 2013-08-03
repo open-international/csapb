@@ -9,13 +9,13 @@ body {
     padding: 0;
     background-color: #D2B48C;
 }
-section {
+section#helping {
     background-color: #008080;
 }
-section p {
+section#helping p {
     color: #F8F8F8;
 }
-section h2 {
+section#helping h2 {
     color: #FF6600; 
 }
 header {
@@ -82,20 +82,189 @@ h2 {
 .rs-slideshow .slide-container img {
     position: absolute;
 }
-a#history {
-    margin-left: 660px;
+#nav {
+ background: #e5e5e5;
+ float: left;
+ margin: 0; padding: 0;
+ border: 1px solid white;
+ border-bottom: none;
 }
+
+#nav li a, #nav li {
+ float: left;
+}
+
+#nav li {
+ list-style: none;
+ position: relative;
+}
+
+#nav li a {
+ padding: 1em 2em;
+ text-decoration: none;
+ color: white;
+ background: #292929;
+ background: -moz-linear-gradient(top, black, #3c3c3c 1px, #292929 25px);
+ background: -webkit-gradient(linear, left top, left 25, from(black), color-stop(4%, #3c3c3c), to(#292929));
+ border-right: 1px solid #3c3c3c;
+ border-left: 1px solid #292929;
+ border-bottom: 1px solid #232323;
+ border-top: 1px solid #545454;
+}
+
+#nav li a:hover {
+ background: #2a0d65;
+ background: -moz-linear-gradient(top, #11032e, #2a0d65);
+ background: -webkit-gradient(linear, left top, left bottom, from(#11032e), to(#2a0d65));
+}
+
+
+/* Submenu */
+
+.hasChildren {
+	position: absolute;
+	width: 5px; height: 5px;
+	background: black;
+	right : 0;
+	bottom: 0;
+}
+#nav li ul {
+ display: none;
+ position: absolute;
+ left: 0;
+ top: 100%;
+ padding: 0; margin: 0;
+}
+
+#nav li:hover > ul {
+ display: block;
+}
+
+#nav li ul li, #nav li ul li a {
+ float: none;
+}
+
+#nav li ul li {
+ _display: inline; /* for IE6 */
+}
+
+#nav li ul li a {
+ width: 150px;
+ display: block;
+}
+
+/* SUBSUB Menu */
+
+#nav li ul li ul {
+ display: none;
+}
+
+#nav li ul li:hover ul {
+ left: 100%;
+ top: 0;
+}
+
+
+#nav li ul
+
+section#temporary {
+    margin-left: 45%;
+}
+a#visit:link {
+    color: #FF6600;
+    font-size: x-large;
+    margin-left: 130px;
+    border: solid;
+    border-width: 10px;
+    border-color: #FF6600;
+}
+a#visit:hover {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+    
 </style>
+
 <script src="../jquery-current.min.js"></script>
 <script src="jquery.rs.slideshow.min.js"></script>
+
 <script>
 $(document).ready(function() {	
     $("#slideshow-div").rsfSlideshow();
 });
 </script>
+
+<script src="./jquery.min.js.dropdown" type="text/javascript" charset="utf-8"></script>
+<script src="../jquery.effects.core.js.dropddown" type="text/javascript"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+<script>
+var site = function() {
+	this.navLi = $('#nav li').children('ul').hide().end();
+	this.init();
+};
+
+site.prototype = {
+ 	
+ 	init : function() {
+ 		this.setMenu();
+ 	},
+ 	
+ 	// Enables the slidedown menu, and adds support for IE6
+ 	
+ 	setMenu : function() {
+ 	
+ 	$.each(this.navLi, function() {
+ 		if ( $(this).children('ul')[0] ) {
+ 			$(this).append('<span class="hasChildren" />');
+ 		}
+ 	});
+ 	
+ 		this.navLi.hover(function() {
+ 			// mouseover
+			$(this).find('> ul').stop(true, true).slideDown('slow', 'easeOutBounce');
+ 		}, function() {
+ 			// mouseout
+ 			$(this).find('> ul').stop(true, true).hide(); 		
+		});
+ 		
+ 	}
+ 
+}
+new site();
+</script>
 </head>
 
 <body>
+<ul id="nav">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a>
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">About Them</a></li>
+      <li><a href="#">About You</a>
+        <ul>
+	  <li><a href="#">More About Us</a></li>
+	  <li><a href="#">More About Them</a></li>
+	  <li><a href="#">More About You</a></li>					</ul>
+      </li>						
+    </ul>
+  </li>
+  <li><a href="#">Portfolio</a></li>
+  <li><a href="#">Contact</a>
+    <ul>
+      <li><a href="#">International</a></li>
+      <li><a href="#">Corporate</a>
+	<ul>
+	  <li><a href="#">International</a></li>
+	  <li><a href="#">Corporate</a></li>
+	  <li><a href="#">American Offices</a></li>
+	</ul>
+      </li>
+  <li><a href="#">American Offices</a></li>				            </ul>
+  </li>	
+  <li><a href="#">Mission Statement</a></li>		
+</ul>
 
 <header>
 <img src="images/adjapendaba_logo.svg" alt="Adja Penda Ba Logo">
@@ -154,16 +323,20 @@ $(document).ready(function() {
 </ol>
 </div>
 
-<section>
+<section id="helping">
+  <h2>Comment Vous Pouvez Aider:</h2>
 
-<h2>Comment Vous Pouvez Aider:</h2>
-
-<p>Donner de votre temps volontairement avec Open International ou à l’étranger
+    <p>Donner de votre temps volontairement avec Open International ou à l’étranger
 à l’école à Nioro au Sénégal.</p>
-
+    <p>S'il vous plaîvisitez:</p>
+<a id="visit" href="http://openinternational.org/donate">OPEN International</a>
 </section>
 
-<a id="history" href="accueil/historique.html">Historique</a>
+<section id="temporary">
+  <a id="history" href="accueil/historique.html">Historique</a>
+  <a id="institutions" href="partenaires/open.html">Helping Groups</a>
+</section>
+
 <footer>
 <a href="http://validator.w3.org/check/referer">
 <strong> HTML </strong> Valid! </a>  
